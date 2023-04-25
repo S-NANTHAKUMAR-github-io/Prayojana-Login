@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;800&display=swap');
+
+.two-section {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    overflow-y: hidden;
+}
+
+.right-side {
+    flex: 1;
+    position: relative;
+    top: 80px;
+    width: 785px;
+    height: 573px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: right;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.right-side img {
+    position: relative;
+    top: 0;
+
+}
+
+.left-side {
+    position: relative;
+    flex: 1;
+    /* background-image: url(./images/image1.ico); */
+    background-repeat: no-repeat;
+    left: 100px;
+    top: 65px;
+    width: 340px;
+    height: 72px;
+
+
+}
+
+.left-side img {
+    position: relative;
+    right: 160px;
+    width: 340px;
+    height: 72px;
+}
+
+
+.signin-text h1 {
+
+    width: 340px;
+    height: 36px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #111827;
+    top: 15px;
+    right: 39px;
+    position: relative;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.email-input {
+    position: relative;
+    top: 50px;
+    width: 350px;
+    right: 40px;
+}
+
+
+.email-input h5 {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    right: 125px;
+    font-family: 'Inter', sans-serif;
+    line-height: 20px;
+}
+
+.password-input {
+    position: relative;
+    top: 60px;
+    width: 350px;
+    right: 41px;
+}
+
+.password-input h5 {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    right: 140px;
+    font-family: 'Inter', sans-serif;
+    line-height: 20px;
+    top: 5px;
+}
+
+.form-check {
+    top: 80px;
+    position: relative;
+    right: 40px;
+}
+
+.remember-me h5 {
+    position: relative;
+    font-size: 12px;
+    font-weight: 350;
+    right: 269px;
+    top: 57px;
+}
+
+.forget-password h5 {
+    position: relative;
+    width: 154px;
+height: 20px;
+
+/* text-sm/leading-5/font-medium */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+text-align: right;
+
+/* indigo/600 */
+
+color: #4F46E5;
+}
