@@ -400,8 +400,204 @@
     order: 4;
     align-self: stretch;
     flex-grow: 0;
+    position: absolute;
 }
 
-.checkbox-txt{
-    
+.checkbox-txt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    width: 120px;
+    height: 20px;
+    position: absolute;
+}
+
+.input-checkbox input {
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    position: absolute;
+    top: 160px;
+    right: 115px;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+}
+
+.checkbox-label h5 {
+    width: 96px;
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #111827;
+    position: absolute;
+    top: 158px;
+}
+
+.Forget-textbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    width: 154px;
+    height: 20px;
+    position: absolute;
+}
+
+.forget-label h5 {
+    width: 154px;
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    color: #4F46E5;
+    position: absolute;
+    top: 158px;
+    left: 215px;
+}
+
+/* Signin-button */
+
+.signin-button input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 17px;
+    width: 384px;
+    height: 38px;
+    background: #4F46E5;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    position: absolute;
+    bottom: 120px;
+    left: 70px;
+}
+
+.button-label h5 {
+    width: 46px;
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 500px;
+    left: 240px;
+}
+
+.signup-text a {
+    width: 180px;
+    height: 19px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    position: absolute;
+    top: 550px;
+    left: 170px;
+
+}
+
+
+/* CSS for mobile devices */
+@media screen and (max-width: 767px) {
+    .frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .right-side {
+      display: none;
+    }
+  
+    .content {
+      width: 100%;
+      padding: 1rem;
+    } */
+
+    .right-side {
+        display: none;
+    }
+
+    .content {
+        padding: 2rem;
+    }
+
+    .form {
+        max-width: none;
+    }
+
+    .header {
+        margin-top: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .headline {
+        text-align: center;
+    }
+
+    /* .form {
+      margin-top: 1rem;
+    } */
+
+    .social-signin,
+    .ribbon,
+    .signup-text {
+        text-align: center;
+    }
+
+    .social-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fb-box,
+    .tw-box,
+    .gt-box {
+        width: 40%;
+        margin-bottom: 0.5rem;
+    }
+
+    .email-input,
+    .password-input,
+    .supporting-input,
+    .signin-button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .email-form,
+    .password-form {
+        height: 1rem;
+    }
+
+    .email-placeholder,
+    .password-placeholder  {
+        margin-top: 0.5rem;
+        height: 50px;
+        position: absolute;
+        top: 18px;
+    }
 }

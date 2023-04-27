@@ -1,10 +1,10 @@
 import React from 'react'
 import './Signin.css'
-import bgimg from './images/background.png'
-import logo from './images/image1.ico'
-import fbimg from './images/fb-Social.png'
-import twimg from './images/tw-social.png'
-import gtimg from './images/git-social.png'
+import bgimg from '../images/background.png'
+import logo from '../images/image1.ico'
+import fbimg from '../images/fb-Social.png'
+import twimg from '../images/tw-social.png'
+import gtimg from '../images/git-social.png'
 
 function Signin() {
     return (
@@ -107,11 +107,33 @@ function Signin() {
                         {/* Supporting-input */}
                         <div className='supporting-input'>
                             <div className='checkbox-txt'>
-
+                                <div className='input-checkbox'>
+                                    <input type='checkbox' />
+                                </div>
+                                <div className='checkbox-label'>
+                                    <h5>Remember me</h5>
+                                </div>
+                            </div>
+                            <div className='Forget-textbox'>
+                                <div className='forget-label'>
+                                    <h5>Forget your password?</h5>
+                                </div>
                             </div>
                         </div>
 
+                        {/* Signin-button */}
+                        <div className='signin-button'>
+                            <input type='button' />
+                            <div className='button-label'>
+                                <h5>Sign in</h5>
+                            </div>
+                        </div>
 
+                        {/* New customer Signup */}
+
+                        <div className='signup-text'>
+                            <a href='#'>New customer? Sign up</a>
+                        </div>
 
                     </div>
 

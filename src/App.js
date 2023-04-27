@@ -1,12 +1,15 @@
 import './App.css';
 // import Login from './Login';
-import Signin from './Signin';
+// import Signin from './Components/Signin';
+import Navbar from './Components/Navbar';
+
 
 function App() {
   return (
     <div className="App">
       {/* <Login/> */}
-      <Signin/>
+      {/* <Signin /> */}
+      <Navbar/>
     </div>
   );
 }
