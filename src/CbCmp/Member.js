@@ -47,7 +47,7 @@ function Member() {
 
         {/* Filter icon */}
         <div>
-          {/* Filter field will add soon.. */}
+          
         </div>
         {/* MainContent */}
         <div className='Main-frame'>
