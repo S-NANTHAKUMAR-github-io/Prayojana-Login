@@ -1,7 +1,8 @@
 import './App.css';
+import CbMember from './Components/CbMember';
 // import Login from './Login';
 // import Signin from './Components/Signin';
-import Navbar from './Components/Navbar';
+// import Navbar from './Components/Navbar';
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <div className="App">
       {/* <Login/> */}
       {/* <Signin /> */}
-      <Navbar/>
+      <CbMember/>
     </div>
   );
 }

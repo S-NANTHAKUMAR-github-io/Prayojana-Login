@@ -84,8 +84,9 @@
 }
 
 .bottom-border1 {
-    width: 88px;
+    width: 68px;
     height: 2px;
+
 
 }
 
@@ -576,80 +577,65 @@ border-radius: 16px;
 /* End-Line-css */
 .line {
     position: absolute;
-    width: 1365px;
+    width: 1360px;
     height: 0px;
     left: 0px;
     top: 69px;
     border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-/* Media Query */
 
-/* Navbar.css */
-
-/* Styles for desktop and larger screens */
-.carebuddy-navbar {
-    /* Add your desktop styles here */
-}
-
-/* Media query for mobile devices */
 @media (max-width: 767px) {
-
-    /* Styles for mobile devices */
-    .carebuddy-navbar {
-        /* Add your mobile styles here */
-        /* For example, you can make the Navbar stack vertically */
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Styles for individual Navbar items on mobile */
-    .dashboard-outer,
-    .interaction-outer,
-    .task-outer,
-    .calander-outer,
-    .member-outer,
-    .report-outer,
-    .admin-outer,
-    .setup-outer {
-        /* Add your mobile styles here */
-        /* For example, you can remove padding and margin, and adjust font size */
-        padding: 0;
-        margin: 0;
-        font-size: 14px;
-    }
-
-    /* Styles for bottom borders on mobile */
-    .bottom-border1,
-    .bottom-border2,
-    .bottom-border3,
-    .bottom-border4,
-    .bottom-border5,
-    .bottom-border6,
-    .bottom-border7,
-    .bottom-border8 {
-        /* Add your mobile styles here */
-        /* For example, you can adjust the width and color of the bottom borders */
-        width: 100%;
-        height: 1px;
-        background-color: #000;
-    }
-
-    /* Styles for divide line on mobile */
-    .divide-line {
-        /* Add your mobile styles here */
-        /* For example, you can adjust the margin and padding */
-        margin-top: 10px;
-        padding-top: 10px;
-    }
-
-    /* Styles for the logo on mobile */
-    .logo {
-        /* Add your mobile styles here */
-        /* For example, you can adjust the width and height of the logo */
-        width: 40px;
-        height: 40px;
-        top: 30px;
-        position: absolute;
-    }
+  .carebuddy-navbar {
+    width: 100%;
+  }
+  
+  .frame {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  
+  .Link-frame {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 8px;
+  }
+  
+  .logo-frame {
+    align-items: center;
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
+  
+  .dashboard-outer,
+  .interaction-outer,
+  .task-outer,
+  .calander-outer,
+  .member-outer {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  
+  .dashboard-text h5,
+  .interaction-text h5,
+  .task-text h5,
+  .calander-text h5,
+  .member-text h5 {
+    font-size: 12px;
+  }
 }
