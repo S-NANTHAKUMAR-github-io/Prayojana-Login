@@ -1,8 +1,29 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useReducer } from 'react'
 import './Members.css'
 import styles from './Members.module.css'
 
 function Member() {
+
+  // for color card
+  const [Color, setColor] = useState([
+    { id: 1, text: "harness real-time e-markets", color: "red" },
+    { id: 2, text: "synergize scalable supply-chains", color: "blue" },
+    { id: 3, text: "e-enable strategic applications", color: "yellow" }
+
+  ]);
+
+  function getColor(text) {
+    switch (text) {
+      case "harness real-time e-markets":
+        return "red";
+      case "synergize scalable supply-chains":
+        return "blue";
+      case "e-enable strategic applications":
+        return "yellow";
+      default:
+        return "black";
+    }
+  }
 
 
   //for fetching data
@@ -26,7 +47,8 @@ function Member() {
         const response = await fetch('https://jsonplaceholder.typicode.com/users/');
         const data = await response.json();
         setCount(data.length);
-        setData(data)
+        setData(data);
+        setColor(data);
       }
       catch (error) {
         console.error(error)
@@ -47,7 +69,7 @@ function Member() {
 
         {/* Filter icon */}
         <div>
-          
+          {/* Filter field will add soon.. */}
         </div>
         {/* MainContent */}
         <div className='Main-frame'>
@@ -68,17 +90,29 @@ function Member() {
                   <tr key={item.id}>
                     <td className='name'><h5>{item.name}</h5></td>
                     <td className='contact'>
-                      <span><h4>{item.phone}</h4></span><br/>
+                      <span><h4>{item.phone}</h4></span><br />
                       <span><h5>{item.email}</h5></span>
                     </td>
                     <td className='location'>
                       <h4>{item.address.street}{","}{item.address.city}</h4>
                     </td>
-                    <td className='last-interaction'>{item.company.catchPhrase}</td>
-                    <td className='task'>{item.company.bs}</td>
+                    <td className='last-interaction'><h5>{item.company.catchPhrase}</h5></td>
+                    <td className={getColor(item.type)}><h5 value={Color} onChange={(e) => setColor(e.target.value)}>{item.company.bs}</h5></td>
                   </tr>
                 ))
               }
+              {
+                Color.map((user) => (
+                  <>
+                    <tr >
+                      <td key={user.name} className={getColor(user.text)}><h5>{user.zipcode}</h5></td>
+                    </tr>
+                  </>
+
+                ))
+              }
+
+
             </tbody>
           </table>
           <div className='footer-line'></div>
