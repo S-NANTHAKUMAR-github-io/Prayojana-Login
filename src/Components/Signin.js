@@ -5,9 +5,15 @@ import logo from '../images/image1.ico'
 import fbimg from '../images/fb-Social.png'
 import twimg from '../images/tw-social.png'
 import gtimg from '../images/git-social.png'
+import {Link,Route,Routes,useNavigate} from 'react-router-dom'
 
 function Signin() {
+
+
+
     return (
+    <div>
+        <Link to='/'></Link>
         <div className='frame'>
             {/* right-side */}
             <div className='right-side'>
@@ -49,7 +55,7 @@ function Signin() {
                         <div className='fb-box'>
                             <div className='fb-outer-box'>
                                 <div className='fb'>
-                                    <img src={fbimg} alt='fb-img' />
+                                    <button><img src={fbimg} alt='fb-img' /></button>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +63,7 @@ function Signin() {
                         <div className='tw-box'>
                             <div className='tw-outer-box'>
                                 <div className='tw'>
-                                    <img src={twimg} alt='tw-img' />
+                                    <button><img src={twimg} alt='tw-img' /></button>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +71,7 @@ function Signin() {
                         <div className='gt-box'>
                             <div className='gt-outer-box'>
                                 <div className='gt'>
-                                    <img src={gtimg} alt='gt-img' />
+                                    <button><img src={gtimg} alt='gt-img' /></button>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +138,7 @@ function Signin() {
                         {/* New customer Signup */}
 
                         <div className='signup-text'>
-                            <a href='#'>New customer? Sign up</a>
+                            <Link to='/signup' >New customer? Sign up</Link>
                         </div>
 
                     </div>
@@ -143,7 +149,7 @@ function Signin() {
 
             </div>
 
-
+        </div>
         </div>
     )
 }

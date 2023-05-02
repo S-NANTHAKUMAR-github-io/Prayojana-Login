@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 function CbMember() {
   return (
     <div>
-        <Navbar />
+        {/* <Navbar /> */}
         
     </div>
   )

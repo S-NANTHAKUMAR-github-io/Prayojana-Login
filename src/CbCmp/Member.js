@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useReducer } from 'react'
 import './Members.css'
 import styles from './Members.module.css'
+import {Link,Route,Routes,Outlet} from 'react-router-dom'
+import MemberProfile from '../MembersCmp/MemberProfile';
 
 function Member() {
 
@@ -12,6 +14,8 @@ function Member() {
 
   ]);
 
+
+  // function for color card
   function getColor(text) {
     switch (text) {
       case "harness real-time e-markets":
@@ -40,7 +44,7 @@ function Member() {
   const npages = Math.ceil(data.length / recordsPerPage)
   const numbers = [...Array(npages + 1).keys()].slice(1)
 
-
+//api fetching
   useEffect(() => {
     async function countMember() {
       try {
@@ -84,6 +88,8 @@ function Member() {
                 <th className='Task-frame'><h5>Tasks</h5></th>
               </tr>
             </thead>
+
+            {/* for cloumn values */}
             <tbody className='cloumn-frame'>
               {
                 records.map((item) => (
@@ -97,10 +103,13 @@ function Member() {
                       <h4>{item.address.street}{","}{item.address.city}</h4>
                     </td>
                     <td className='last-interaction'><h5>{item.company.catchPhrase}</h5></td>
-                    <td className={getColor(item.type)}><h5 value={Color} onChange={(e) => setColor(e.target.value)}>{item.company.bs}</h5></td>
+                    <td className={getColor(item.type)}><Link to='memberProfile'><h5>hello</h5></Link></td>
                   </tr>
+                  
                 ))
+                
               }
+              
               {
                 Color.map((user) => (
                   <>
@@ -148,7 +157,14 @@ function Member() {
 
 
       </div>
+
+      
+      
+
+      <Outlet/>
+
     </div>
+   
   )
 
 
@@ -158,8 +174,8 @@ function Member() {
     }
   }
 
-  function changeCPage(name) {
-    setCurrentPage(name)
+  function changeCPage(id) {
+    setCurrentPage(id)
   }
 
   function nextPage() {

@@ -4,7 +4,7 @@ import logo from '../images/image1.ico'
 import SeIcon from '../images/Icon.png'
 import bellicon from '../images/bellicon.png'
 import Avatar from '../images/Avatar.png'
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link, Route, Router, Routes } from 'react-router-dom'
 import Dashboard from '../CbCmp/Dashboard'
 import InteractionPage from '../CbCmp/InteractionPage'
 import TaskPage from '../CbCmp/TaskPage'
@@ -13,6 +13,7 @@ import Member from '../CbCmp/Member'
 import Report from '../CbCmp/Report'
 import Admin from '../CbCmp/Admin'
 import Setup from '../CbCmp/Setup'
+import MemberProfile from '../MembersCmp/MemberProfile'
 
 
 
@@ -179,11 +180,14 @@ function Navbar() {
         <Route path='/interaction' element={<InteractionPage />} />
         <Route path='/task' element={<TaskPage />} />
         <Route path='/calander' element={<Calander />} />
-        <Route path='member' element={<Member />} />
-        <Route path='report' element={<Report />} />
+        <Route path='/member' element={<Member />} > 
+          <Route path='memberProfile' element={<MemberProfile/>} />
+        </Route>
+        <Route path='/report' element={<Report />} />
         <Route path='/admin' element={<Admin />} />
         <Route path='/setup' element={<Setup />} />
       </Routes>
+      
     </>
   )
 }
